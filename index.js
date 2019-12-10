@@ -10,8 +10,9 @@ mongoose
   .connect(
     "mongodb+srv://root:root@cluster0-1klu4.mongodb.net/test?retryWrites=true&w=majority",
     {
+      useNewUrlParser: true,
       useUnifiedTopology: true,
-      useNewUrlParser: true
+      useCreateIndex: true
     }
   )
   .then(() => console.log("connected"))
