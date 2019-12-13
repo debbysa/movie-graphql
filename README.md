@@ -6,11 +6,11 @@
    > npm run dev
 3. Open
    > localhost:4000/graphql
-4. Select all book :
+4. Select all movie :
 
 ```
 {
- 	movies{
+    movies{
         title
         genre
     }
