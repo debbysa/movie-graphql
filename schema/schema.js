@@ -9,7 +9,8 @@ const {
   GraphQLString,
   GraphQLSchema,
   GraphQLID,
-  GraphQLList
+  GraphQLList,
+  GraphQLNonNull
 } = graphql;
 
 // dummy data
@@ -120,8 +121,8 @@ const Mutation = new GraphQLObjectType({
     addActor: {
       type: ActorType,
       args: {
-        name: { type: GraphQLString },
-        gender: { type: GraphQLString }
+        name: { type: new GraphQLNonNull(GraphQLString) },
+        gender: { type: new GraphQLNonNull(GraphQLString) }
       },
       resolve(parent, args) {
         let actor = new Actor({
@@ -134,9 +135,9 @@ const Mutation = new GraphQLObjectType({
     addMovie: {
       type: MovieType,
       args: {
-        title: { type: GraphQLString },
-        genre: { type: GraphQLString },
-        actorId: { type: GraphQLID }
+        title: { type: new GraphQLNonNull(GraphQLString) },
+        genre: { type: new GraphQLNonNull(GraphQLString) },
+        actorId: { type: new GraphQLNonNull(GraphQLID) }
       },
       resolve(parent, args) {
         let movie = new Movie({
