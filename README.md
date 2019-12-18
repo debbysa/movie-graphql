@@ -4,15 +4,21 @@
    ```sh
    cd movie-graphql/
    ```
-2. run this command below, then press ENTER :
+2. install all dependencies
+
+   ```sh
+   npm install
+   ```
+
+3. run this command below, then press ENTER :
    ```sh
    npm run dev
    ```
-3. Open
+4. Open GraphiQL
    ```sh
    localhost:4000/graphql
    ```
-4. Select all movie :
+5. Select all movie :
 
 ```
 {
@@ -23,13 +29,26 @@
 }
 ```
 
-5. select all actor :
+6. select all actor :
 
 ```
 {
     actors{
         name
         gender
+    }
+}
+```
+
+7. select all actor with their movie :
+
+```
+{
+    actors{
+        name
+        movies{
+            title
+        }
     }
 }
 ```
