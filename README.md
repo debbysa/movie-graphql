@@ -2,7 +2,7 @@
 
 1. open your terminal, access your project location. example :
    ```sh
-   cd miniclass-web/simple-graphql/
+   cd movie-graphql/
    ```
 2. run this command below, then press ENTER :
    ```sh
